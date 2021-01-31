@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/">Music store</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link active" href="/bands">Bands</a>
+              <a class="nav-link" href="/pricing">Pricing</a>
+              <a class="nav-link" href="/about-us">About us</a>
+            </div>
+          </div>
+        </div>
+        <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+      </nav>
+    <h1>All bands</h1>
+    {% for band in bands %}
+
+    <div class="card" style="width: 18rem;">
+        <img src="{{band.image}}" class="card-img-top" alt="Band image">
+        <div class="card-body">
+        <h5 class="card-title">{{band.name}}</h5>
+        {% if band.can_rock %}
+            <p class="card-text">This band can rock!</p>
+        {% else %}
+            <p class="card-text">This band cant rock!</p>
+        {% endif %}
+        <a href="/blog/bands/{{forloop.counter}}" class="btn btn-primary">See details</a>
+        </div>
+      </div>
+       
+    {% endfor %}
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://static.dw.com/image/45095573_303.jpg" class="d-block w-100 h-50" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="https://i.pinimg.com/originals/a6/98/a0/a698a0a05318d6753c67635c32b9a7ae.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="https://3dwarehouse.sketchup.com/warehouse/v1.0/publiccontent/e67da0f8-bafa-4355-aecf-e3d2ec641cff" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </a>
+</div>
+</body>
+</html>

@@ -1,0 +1,6 @@
+[{'ID': 1, 'ime': 'Blerdijan', 'autor': 'Kolic', 'godina': 2020, 'strana': 234, 'cijena': 1.2, 'lokacija_knjige': 'A3'}, {'ID': 2, 'ime': 'Beni', 'autor': 'Dob', 'godina': 1999, 'strana': 102, 'cijena': 9.9, 'lokacija_knjige': 'B3'}, {'ID': 3, 'ime': 'Dovla', 'autor': 'Bor', 'godina': 2000, 'strana': 34, 'cijena': 10.9, 'lokacija_knjige': 'C4'}]
+
+[{'ID': 1, 'kapacitet': 300, 'spratnost': 4, 'knjiga_unutra': 200, 'lokacija_police': 'Desno', 'slobodno_mjesta': 100}, {'ID': 2, 'kapacitet': 200, 'spratnost': 1, 'knjiga_unutra': 200, 'lokacija_police': 'Lijevo', 'slobodno_mjesta': 0}]
+
+[{'ID': 1, 'ime': 'Marko', 'godina': 1980, 'smjena': 1, 'plata': 500, 'sati_rada': 8}, {'ID': 2, 'ime': 'Igor', 'godina': 1950, 'smjena': 2, 'plata': 700, 'sati_rada': 10}]
+

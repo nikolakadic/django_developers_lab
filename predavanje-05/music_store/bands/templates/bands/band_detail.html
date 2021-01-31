@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+</head>
+<body>
+    <a href="/blog/bands/" class="btn btn-primary"><- See all bands</a>
+    <h1>All bands</h1>
+    <div class="card" style="width: 18rem;">
+        <img src="{{band.image}}" class="card-img-top" alt="Band image">
+        <div class="card-body">
+        <h5 class="card-title">{{band.name}}</h5>
+        {% if band.can_rock %}
+            <p class="card-text">This band can rock!</p>
+        {% else %}
+            <p class="card-text">This band cant rock!</p>
+        {% endif %}
+        <p class="card-text">{{band.description}}</p>
+        </div>
+      </div>
+</body>
+</html>
